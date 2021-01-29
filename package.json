@@ -1,0 +1,50 @@
+{
+  "name": "",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "autoprefixer": "^9.8.6",
+    "bootstrap-less": "^3.3.8",
+    "cwebp-bin": "^5.1.0",
+    "imagemin": "^7.0.0",
+    "imagemin-jpegtran": "^6.0.0",
+    "jpegtran": "^1.1.0",
+    "jpegtran-bin": "^4.0.0",
+    "plyr": "^3.6.2"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.12",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.0",
+    "gulp-csso": "^3.0.1",
+    "gulp-html-minifier": "^0.1.8",
+    "gulp-imagemin": "^6.2.0",
+    "gulp-less": "^4.0.1",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-posthtml": "^3.0.5",
+    "gulp-rename": "^1.4.0",
+    "gulp-series": "^1.0.2",
+    "gulp-svgmin": "^2.2.0",
+    "gulp-svgo": "^2.2.1",
+    "gulp-svgstore": "^7.0.1",
+    "gulp-uglify-es": "^2.0.0",
+    "gulp-webp": "^4.0.1",
+    "posthtml-include": "^1.4.3",
+    "run-sequence": "^2.2.1"
+  },
+  "private": true,
+  "browserslist": [
+    "last 2 versions",
+    "IE 11",
+    "Firefox ESR"
+  ],
+  "scripts": {
+    "test": "editorconfig-tools check *"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,47 @@
+/* Font style */
+
+@font1: 'SF Pro Display';
+@font2: 'Gilroy';
+
+/* Container width */
+
+@container: 1720px;
+
+.w100() {
+  width: 100%;
+
+  padding: 0;
+  margin: 0;
+}
+
+
+.wrapper() {
+  width: @container;
+  max-width: calc(100% - 30px);
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.button() {
+  padding: 0;
+  margin: 0;
+
+  background: none;
+  border: none;
+
+  cursor: pointer;
+
+  text-align: center;
+  vertical-align: middle;
+
+  outline: none;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
