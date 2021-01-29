@@ -15,6 +15,10 @@
 
     <div class="popup__overlay"></div>
 
+    <!-- header -->
+
+    <script src="js/language.min.js"></script>
+
     <!-- swiper -->
     <script src="libs/swiper.min.js"></script>
     <script src="js/swiper-init.min.js"></script>
