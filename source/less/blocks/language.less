@@ -3,120 +3,13 @@
 
   padding: 0;
   margin: 0;
-}
 
-.language__list,
-.language__item,
-.language__label,
-.language__current {
-  .w100();
+  width: 69px;
+  height: 31px;
 
-  font-family: @font1;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 14px;
-
-  text-transform: uppercase;
-}
-
-.language__current {
-  position: relative;
-
-  z-index: 1;
-
-  .button();
-
-  padding: 7.7px 33px 7.7px 16.3px;
-
-  border-radius: 50px;
-
-  &::before {
-    content: '';
-
-    position: absolute;
-
-    top: 9px;
-    right: 17px;
-
-    width: 7px;
-    height: 7px;
-
-    border-top: none;
-    border-left: none;
-
-    transform: rotate(45deg);
-  }
-
-  &.active {
-    border-color: transparent;
-
-    &::before {
-      top: 12px;
-
-      border-bottom: none;
-      border-right: none;
-    }
-  }
-
-  &--header {
-    color: #0F5CB9;
-
-    border: 1px solid #0F5CB9;
-
-    &::before {
-      border-bottom: 2px solid #0F5CB9;
-      border-right: 2px solid #0F5CB9;
-    }
-
-    &.active {
-      color: #F2994A;
-
-      &::before {
-        border-top: 2px solid #F2994A;
-        border-left: 2px solid #F2994A;
-      }
-    }
-
-    &:not(.active):hover,
-    &:not(.active):focus {
-      color: #F2994A;
-
-      border-color: #F2994A;
-
-      &::before {
-        border-color: #F2994A;
-      }
-    }
-  }
-}
-
-.language__item {
-  padding: 0 33px 0 16.3px;
-
-  &:not(:first-of-type) {
-    margin-top: 13px;
-  }
-
-  &:first-of-type {
-    margin-top: 5.2px;
-  }
-
-  &:last-of-type {
-    margin-bottom: 10px;
-  }
-}
-
-.language__label {
-  display: block;
-
-  color: #010B3D;
-
-  cursor: pointer;
-
-  &:hover,
-  &:focus {
-    color: #0F5CB9;
+  &--footer {
+    margin-right: 0;
+    margin-left: auto;
   }
 }
 
@@ -126,23 +19,179 @@
   top: 0;
   left: 0;
 
-  z-index: 0;
+  display: flex;
 
-  padding-top: 31px;
+  flex-direction: column;
 
-  border-radius: 18px;
+  justify-content: flex-start;
+  align-items: flex-start;
 
-  list-style: none;
+  width: 100%;
+  height: 31px;
 
-  opacity: 0;
-  pointer-events: none;
+  padding: 0;
+  margin: 0;
 
-  &.active {
-    opacity: 1;
-    pointer-events: all;
-  }
+  padding-right: 25px;
+
+  border-radius: 50px;
+
+  overflow: hidden;
+
+  cursor: pointer;
+
+  transition: height 0.3s, border-radius 0.3s;
 
   &--header {
+    border: 1px solid #0F5CB9;
+
+    background-color: #ffffff;
+
+    & a {
+      color: #010B3D;
+
+      &.active {
+        color: #0F5CB9;
+      }
+    }
+
+    &::before,
+    &::after {
+      background-color: #0F5CB9;
+    }
+
+    &.active {
+      & a:hover:not(.active) {
+        color: #0F5CB9;
+      }
+    }
+  }
+
+  &--footer {
+    border: 1px solid #ffffff;
+
+    background-color: #5D6D7F;
+
+    & a {
+      color: #ffffff;
+    }
+
+    &::before,
+    &::after {
+      background-color: #ffffff;
+    }
+
+    &.active {
+      & a:hover:not(.active) {
+        opacity: 0.6;
+      }
+    }
+  }
+
+  & a {
+    order: 1;
+
+    display: flex;
+
+    justify-content: flex-start;
+    align-items: center;
+
+    width: 100%;
+
+    padding: 0;
+    margin: 0;
+
+    padding: 5px 0 5px 17px;
+
+    font-family: @font1;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+
+    text-transform: uppercase;
+
+    &.active {
+      order: 0;
+
+      padding: 7px 0 7px 17px;
+    }
+  }
+
+  &::before,
+  &::after {
+    content: '';
+
+    position: absolute;
+
+    top: 17px;
+
+    width: 7px;
+    height: 1.5px;
+
+    transition: top 0.3s, right 0.3s, transform 0.3s;
+  }
+
+  &::before {
+    right: 20.5px;
+
+    transform: rotate(45deg);
+
+    transform-origin: bottom right;
+  }
+
+  &::after {
+    right: 13px;
+
+    transform: rotate(-45deg);
+
+    transform-origin: bottom left;
+  }
+
+  &.active {
     border: 1px solid #F2994A;
+
+    border-radius: 18px;
+
+    transition: height 0.3s, border-radius 0.3s;
+
+    &::before,
+    &::after {
+      background-color: #F2994A;
+
+      top: 11px;
+
+      transition: top 0.3s, right 0.3s, transform 0.3s;
+    }
+
+    &::before {
+      right: 19px;
+
+      transform: rotate(-45deg);
+    }
+
+    &::after {
+      right: 13px;
+
+      transform: rotate(45deg);
+    }
+
+    & a.active {
+      color: #F2994A;
+    }
+  }
+
+  &:hover {
+    border-color: #F2994A;
+
+    & a.active {
+      color: #F2994A;
+    }
+
+    &::before,
+    &::after {
+      background-color: #F2994A;
+    }
   }
 }

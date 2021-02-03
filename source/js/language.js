@@ -1,23 +1,52 @@
 'use strict';
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener('DOMContentLoaded', () => {
   try {
-    var toggleLanguage = (element) => {
-      let language = document.querySelector(element);
+    const DEFAULT_LANGUAGE_HEIGHT = 31
+    const DEFAULT_LANGUAGE_HEIGHT_ITEM = 28
 
-      if (language) {
-        let languageButton = language.querySelector('button');
-        let languageList = language.querySelector('ul');
+    let languages = document.querySelectorAll('.language__list');
 
-        languageButton.addEventListener('click', () => {
-          languageButton.classList.toggle('active');
-          languageList.classList.toggle('active');
-        });
+    let defaultHeight = (element) => {
+      element.classList.remove('active')
+
+      element.style.height = DEFAULT_LANGUAGE_HEIGHT + 'px'
+    }
+
+    languages.forEach((item, i) => {
+      let languageLinks = item.querySelectorAll('.glink'),
+          languageCounts = languageLinks.length
+      if (languageCounts) {
+        languageLinks[0].classList.add('active')
+
+        document.body.addEventListener('click', (evt) => {
+          if (item.classList.contains('active')) {
+            defaultHeight(item)
+          } else if (!item.classList.contains('active') && evt.target === item) {
+            item.classList.add('active')
+
+            item.style.height = (DEFAULT_LANGUAGE_HEIGHT + (languageCounts - 1) * DEFAULT_LANGUAGE_HEIGHT_ITEM) + 'px'
+          }
+
+          if (evt.target.closest('.language__list') && evt.target.tagName === 'A') {
+            var allLanguageLinks = document.querySelectorAll('.glink')
+
+            allLanguageLinks.forEach((item, i) => {
+              let currentLang = GTranslateGetCurrentLang()
+
+              if (item.classList.contains('active') && (item.textContent !== currentLang.toUpperCase())) {
+                item.classList.remove('active')
+              } else if (item.textContent === currentLang.toUpperCase()) {
+                item.classList.add('active')
+              }
+            });
+          }
+        })
       }
-    };
 
-    toggleLanguage('.language--header');
+    });
+
   } catch (e) {
     console.log(e);
   }
-});
+})

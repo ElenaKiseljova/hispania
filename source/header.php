@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <!-- <link rel="icon" href="img/favicon.png" type="image/png"> -->
-
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="stylesheet" href="libs/swiper.min.css">
 
@@ -16,39 +14,20 @@
     <header class="page-header">
       <div class="page-header__wrapper">
         <div class="page-header__half">
-          <p class="logo">
+          <div class="logo logo--header">
             <a href="/">
-              Lii
-              <span>
-                jee
-              </span>
+              <img width="96" src="img/logo.svg" alt="logo">
             </a>
-          </p>
+          </div>
 
           <div class="language language--header">
-            <button type="button" class="language__current language__current--header">
-              en
-            </button>
-            <ul class="language__list language__list--header">
-              <li class="language__item">
-                <input class="visually-hidden" type="radio" name="language-item" value="de">
-                <label class="language__label" for="language-1">
-                  de
-                </label>
-              </li>
-              <li class="language__item">
-                <input class="visually-hidden" type="radio" name="language-item" value="ру">
-                <label class="language__label" for="language-2">
-                  ру
-                </label>
-              </li>
-              <li class="language__item">
-                <input class="visually-hidden" type="radio" name="language-item" value="укр">
-                <label class="language__label" for="language-3">
-                  укр
-                </label>
-              </li>
-            </ul>
+            <div class="language__list language__list--header" tabindex="0">
+              <!-- GTranslate: https://gtranslate.io/ -->
+              <a href="#" onclick="doGTranslate('en|en');return false;" title="English" class="glink nturl notranslate">EN</a>
+              <a href="#" onclick="doGTranslate('en|de');return false;" title="German" class="glink nturl notranslate">DE</a>
+              <a href="#" onclick="doGTranslate('en|ru');return false;" title="Russian" class="glink nturl notranslate">RU</a>
+              <a href="#" onclick="doGTranslate('en|uk');return false;" title="Ukrainian" class="glink nturl notranslate">UK</a>
+            </div>
           </div>
 
           <nav class="navigation" role="menu">
