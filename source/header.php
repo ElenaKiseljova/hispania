@@ -30,8 +30,8 @@
             </div>
           </div>
 
-          <nav class="navigation" role="menu">
-            <ul class="navigation__list">
+          <nav class="navigation navigation--header" role="menu">
+            <ul class="navigation__list navigation__list--header">
               <li>
                 <a href="#">Our projects</a>
               </li>

@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   try {
     const DEFAULT_LANGUAGE_HEIGHT = 31
     const DEFAULT_LANGUAGE_HEIGHT_ITEM = 28
+    const DEFAULT_LANGUAGE = 'EN'
 
     let languages = document.querySelectorAll('.language__list');
 
@@ -34,10 +35,18 @@ document.addEventListener('DOMContentLoaded', () => {
             allLanguageLinks.forEach((item, i) => {
               let currentLang = GTranslateGetCurrentLang()
 
-              if (item.classList.contains('active') && (item.textContent !== currentLang.toUpperCase())) {
-                item.classList.remove('active')
-              } else if (item.textContent === currentLang.toUpperCase()) {
-                item.classList.add('active')
+              if (currentLang !== null) {
+                if (item.classList.contains('active') && (item.textContent !== currentLang.toUpperCase())) {
+                  item.classList.remove('active')
+                } else if (item.textContent === currentLang.toUpperCase()) {
+                  item.classList.add('active')
+                }
+              } else {
+                if (item.classList.contains('active') && (item.textContent !== DEFAULT_LANGUAGE)) {
+                  item.classList.remove('active')
+                } else if (item.textContent === DEFAULT_LANGUAGE) {
+                  item.classList.add('active')
+                }
               }
             });
           }

@@ -1,0 +1,46 @@
+.text {
+  .w100();
+
+  font-family: @font2;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  /* or 150% */
+
+  color: #010B3D;
+
+  &--promo {
+    max-width: 555px;
+
+    font-weight: 500;
+
+    color: #5D6D7F;
+  }
+
+  &--semi {
+    position: relative;
+
+    z-index: 3;
+
+    font-weight: 600;
+
+    &:not(:last-of-type) {
+      margin-right: 94px;
+    }
+  }
+
+  &--semi-large {
+    max-width: 198px;
+  }
+
+  &--semi-short {
+    max-width: 150px;
+  }
+
+  &--apartment {
+    &:not(:last-of-type) {
+      margin-bottom: 20px;
+    }
+  }
+}

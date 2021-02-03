@@ -1,0 +1,53 @@
+.button {
+  .button_default();
+
+  min-width: 260px;
+
+  padding: 15px;
+
+  font-family: @font2;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 24px;
+  /* identical to box height, or 171% */
+
+  text-align: center;
+  text-transform: uppercase;
+
+  color: #FFFFFF;
+
+  border-radius: 6px;
+
+  transition: background-color 0.5s, color 0.3s;
+
+  &:hover,
+  &:focus {
+    transition: background-color 0.5s, color 0.3s;
+  }
+
+  &--promo {
+    margin-top: 52px;
+    margin-bottom: 133px;
+
+    background-color: #F2994A;
+
+    &:hover,
+    &:focus {
+      background-color: #0F5CB9;
+    }
+  }
+
+  &--footer {
+    border: 2px solid #F2994A;
+
+    background-color: #F2994A;
+
+    &:hover,
+    &:focus {
+      background-color: #ffffff;
+
+      color: #F2994A;
+    }
+  }
+}

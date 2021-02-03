@@ -1,0 +1,45 @@
+.title {
+  .w100();
+
+  font-family: @font1;
+  font-style: normal;
+  font-weight: bold;
+
+  text-transform: uppercase;
+
+  &--promo {
+    flex-grow: 1;
+
+    margin-bottom: 32px;
+
+    font-size: 96px;
+    line-height: 100%;
+
+    color: #010B3D;
+
+    & span {
+      color: #0F5CB9;
+    }
+  }
+
+  &--apartments,
+  &--section-inner {
+    color: #010B3D;
+  }
+
+  &--apartments {
+    font-size: 36px;
+    line-height: 100%;
+
+    margin-bottom: 100px;
+  }
+
+  &--apartments-inner {
+    max-width: 500px;
+
+    font-size: 30px;
+    line-height: 130%;
+
+    margin-bottom: 8px;
+  }
+}

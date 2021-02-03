@@ -31,7 +31,7 @@
     }
 
     & a {
-      color: #5D6D7F
+      background: linear-gradient(to right, #0F5CB9 50%, #5D6D7F 50%);
     }
   }
 
@@ -43,7 +43,7 @@
     }
 
     & a {
-      color: #ffffff;
+      background: linear-gradient(to right, #f2994a 50%, #ffffff 50%);
     }
   }
 
@@ -57,12 +57,21 @@
 
     text-transform: uppercase;
 
-    transition: color 0.3s;
+    background-size: 200% 100%;
+    background-position: right bottom;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    transition: background-position 0.5s;
 
     &:hover,
     &:focus {
-      color: #f2994a;
-      transition: color 0.3s;
+      background-position: left bottom;
+
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+
+      transition: background-position 0.5s;
     }
   }
 }
