@@ -3,8 +3,6 @@
 
   min-width: 260px;
 
-  padding: 15px;
-
   font-family: @font2;
   font-style: normal;
   font-weight: bold;
@@ -27,6 +25,8 @@
   }
 
   &--promo {
+    padding: 17px 15px;
+
     margin-top: 52px;
     margin-bottom: 133px;
 
@@ -39,6 +39,8 @@
   }
 
   &--footer {
+    padding: 15px;
+
     border: 2px solid #F2994A;
 
     background-color: #F2994A;
@@ -48,6 +50,14 @@
       background-color: #ffffff;
 
       color: #F2994A;
+    }
+  }
+}
+
+@media (max-width: 1350px) {
+  .button {
+    &--promo {
+      margin-bottom: 100px;
     }
   }
 }

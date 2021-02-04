@@ -17,21 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
             nextEl: `.apartments__button--next${sufixSliders[i]}`,
             prevEl: `.apartments__button--prev${sufixSliders[i]}`,
           },
-          // Responsive breakpoints
-          /*breakpoints: {
-            // when window width is >= 320px
-            320: {
-              slidesPerView: 1,
-            },
-            // when window width is >= 620px
-            620: {
-              slidesPerView: 2,
-            },
-            // when window width is >= 1024px
-            1024: {
-              slidesPerView: 3,
-            }
-          }*/
         });
       }
     });

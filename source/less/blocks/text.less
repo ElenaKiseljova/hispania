@@ -23,6 +23,8 @@
 
     z-index: 3;
 
+    max-width: 198px;
+
     font-weight: 600;
 
     &:not(:last-of-type) {
@@ -30,17 +32,13 @@
     }
   }
 
-  &--semi-large {
-    max-width: 198px;
-  }
-
-  &--semi-short {
-    max-width: 150px;
-  }
-
   &--apartment {
+    &:last-of-type {
+      flex-grow: 1;
+    }
+
     &:not(:last-of-type) {
-      margin-bottom: 20px;
+      margin-bottom: 18px;
     }
   }
 }

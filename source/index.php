@@ -21,20 +21,19 @@
           Order a consultation
         </a>
         <div class="promo__bottom">
-          <p class="text text--semi text--semi-large">
+          <p class="text text--semi">
             3 comfortable apartments near the sea
           </p>
-          <p class="text text--semi text--semi-short">
+          <p class="text text--semi">
             More 100 satisfied clients
           </p>
         </div>
       </div>
-      <div class="promo__image">
-        <img src="img/promo.jpg" alt="promo">
-      </div>
       <p class="promo__background">
         Comfort
       </p>
+    </div>
+    <div class="promo__half" style="background-image: url('../img/promo.jpg');">
     </div>
   </section>
 

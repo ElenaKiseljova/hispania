@@ -14,6 +14,28 @@ document.addEventListener('DOMContentLoaded', () => {
       element.style.height = DEFAULT_LANGUAGE_HEIGHT + 'px'
     }
 
+    let searchCurrentLanguage = () => {
+      var allLanguageLinks = document.querySelectorAll('.glink')
+
+      allLanguageLinks.forEach((item, i) => {
+        let currentLang = GTranslateGetCurrentLang()
+
+        if (currentLang !== null) {
+          if (item.classList.contains('active') && (item.textContent !== currentLang.toUpperCase())) {
+            item.classList.remove('active')
+          } else if (item.textContent === currentLang.toUpperCase()) {
+            item.classList.add('active')
+          }
+        } else {
+          if (item.classList.contains('active') && (item.textContent !== DEFAULT_LANGUAGE)) {
+            item.classList.remove('active')
+          } else if (item.textContent === DEFAULT_LANGUAGE) {
+            item.classList.add('active')
+          }
+        }
+      });
+    }
+
     languages.forEach((item, i) => {
       let languageLinks = item.querySelectorAll('.glink'),
           languageCounts = languageLinks.length
@@ -30,31 +52,14 @@ document.addEventListener('DOMContentLoaded', () => {
           }
 
           if (evt.target.closest('.language__list') && evt.target.tagName === 'A') {
-            var allLanguageLinks = document.querySelectorAll('.glink')
-
-            allLanguageLinks.forEach((item, i) => {
-              let currentLang = GTranslateGetCurrentLang()
-
-              if (currentLang !== null) {
-                if (item.classList.contains('active') && (item.textContent !== currentLang.toUpperCase())) {
-                  item.classList.remove('active')
-                } else if (item.textContent === currentLang.toUpperCase()) {
-                  item.classList.add('active')
-                }
-              } else {
-                if (item.classList.contains('active') && (item.textContent !== DEFAULT_LANGUAGE)) {
-                  item.classList.remove('active')
-                } else if (item.textContent === DEFAULT_LANGUAGE) {
-                  item.classList.add('active')
-                }
-              }
-            });
+            searchCurrentLanguage();
           }
         })
       }
 
     });
 
+    searchCurrentLanguage();
   } catch (e) {
     console.log(e);
   }
