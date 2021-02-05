@@ -61,6 +61,10 @@
     <script src="libs/swiper.min.js"></script>
     <script src="js/swiper-init.min.js"></script>
 
+    <!-- contact form -->
+
+    <script src="js/form.min.js"></script>
+
     <!-- start GTranslate: https://gtranslate.io/ Styles & Scripts -->
     <style>
       #goog-gt-tt {display:none !important;}

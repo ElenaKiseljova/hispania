@@ -1,11 +1,14 @@
 .title {
   .w100();
 
-  font-family: @font1;
+  font-family: @font2;
   font-style: normal;
   font-weight: bold;
 
-  text-transform: uppercase;
+  &--promo,
+  &--page {
+    text-transform: uppercase;
+  }
 
   &--promo {
     flex-grow: 1;
@@ -22,16 +25,45 @@
     }
   }
 
+  &--page {
+    width: 50%;
+
+    font-size: 64px;
+    line-height: 100%;
+
+    color: #ffffff;
+
+    & span {
+      color: #F2994A
+    }
+  }
+
+  &--contact
   &--apartments,
   &--section-inner {
     color: #010B3D;
   }
 
-  &--apartments {
+  &--apartments,
+  &--contact,
+  &--services {
     font-size: 36px;
     line-height: 100%;
+  }
 
+  &--apartments {
     margin-bottom: 100px;
+  }
+
+  &--contact {
+    margin-bottom: 8px;
+  }
+
+  &--services {
+    margin-left: 100px;
+    margin-bottom: 64px;
+
+    color: #ffffff;
   }
 
   &--apartments-inner {
@@ -41,6 +73,14 @@
     line-height: 130%;
 
     margin-bottom: 8px;
+  }
+}
+
+@media (max-width: 1919px) {
+  .title {
+    &--services {
+      margin-left: 50px;
+    }
   }
 }
 

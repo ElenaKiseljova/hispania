@@ -33,12 +33,13 @@
         Comfort
       </p>
     </div>
-    <div class="promo__half" style="background-image: url('../img/promo.jpg');">
+    <div class="promo__half">
+      <img src="img/promo.jpg" alt="hispania">
     </div>
   </section>
 
-  <section class="apartments">
-    <div class="apartments__wrapper">
+  <section class="apartments apartments--center">
+    <div class="apartments__wrapper apartments__wrapper--center">
       <h2 class="title title--apartments">
         Our apartments
       </h2>
@@ -47,7 +48,7 @@
         <?php
           for ($k=1; $k < 4; $k++) :
         ?>
-          <li class="apartments__item">
+          <li class="apartments__item apartments__item--index">
             <div class="apartments__slider apartments__slider--index swiper-container">
               <ul class="apartments__list swiper-wrapper">
                 <?php
@@ -60,10 +61,16 @@
                   }
                 ?>
               </ul>
-              <div class="apartments__navigation apartments__navigation--index">
-                <button class="apartments__button apartments__button--prev--index apartments__button--prev" type="button" name="prev" aria-label="Previous image">
+              <div class="toggle toggle--index">
+                <button class="toggle__button toggle__button--index toggle__button--prev--index toggle__button--prev" type="button" name="prev" aria-label="Previous image">
+                  <svg class="toggle__icon toggle__icon--index" width="29" height="10">
+                    <use xlink:href="#icon-arrow-big"></use>
+                  </svg>
                 </button>
-                <button class="apartments__button apartments__button--next--index apartments__button--next" type="button" name="next" aria-label="Next image">
+                <button class="toggle__button toggle__button--index toggle__button--next--index toggle__button--next" type="button" name="next" aria-label="Next image">
+                  <svg class="toggle__icon toggle__icon--index" width="29" height="10">
+                    <use xlink:href="#icon-arrow-big"></use>
+                  </svg>
                 </button>
               </div>
             </div>
@@ -134,6 +141,79 @@
       </ul>
     </div>
   </section>
+
+  <div class="apartments apartments--bottom">
+    <div class="apartments__wrapper apartments__wrapper--bottom">
+      <section class="contact contact--index">
+        <h2 class="title title--contact">
+          Contact Us
+        </h2>
+
+        <p class="contact__text">
+          to check available apartments on your dates
+        </p>
+
+        <form class="contact__form" id="contact-index" action="" method="post">
+          <label class="contact__label" for="name-1">Name</label>
+          <input class="contact__field" id="name-1" type="text" name="name-1" placeholder="Name" required>
+          <label class="contact__label" for="email-1">E-mail</label>
+          <input class="contact__field" id="email-1" type="email" name="email-1" placeholder="E-mail" required>
+          <label class="contact__label" for="phone-1">Phone number</label>
+          <input class="contact__field" id="phone-1" type="tel" name="phone-1" placeholder="Phone number" required>
+
+          <label class="contact__label" for="message-1">Your message</label>
+          <textarea class="contact__field contact__field--message" id="message-1" name="message-1" placeholder="Tell us about approximate dates of staying, number of guests, apartment you like. and we will answer you about the possibility of booking an apartment for this time" required></textarea>
+
+          <button class="button button--contact" type="submit" name="contact-1">
+            Contact us
+          </button>
+        </form>
+      </section>
+      <section class="services">
+        <h2 class="title title--services">
+          Our service
+        </h2>
+        <ul class="services__list">
+          <li class="services__item">
+            <svg class="services__icon" width="97" height="97" aria-label="services icon">
+              <use xlink:href="#icon-service-1"></use>
+            </svg>
+            <h3 class="services__title">
+              Cleaning
+            </h3>
+          </li>
+          <li class="services__item">
+            <svg class="services__icon" width="97" height="97" aria-label="services icon">
+              <use xlink:href="#icon-service-3"></use>
+            </svg>
+            <h3 class="services__title">
+              Purchase of products
+            </h3>
+          </li>
+          <li class="services__item">
+            <svg class="services__icon" width="97" height="97" aria-label="services icon">
+              <use xlink:href="#icon-service-4"></use>
+            </svg>
+            <h3 class="services__title">
+              Transfer
+            </h3>
+          </li>
+          <li class="services__item">
+            <svg class="services__icon" width="97" height="97" aria-label="services icon">
+              <use xlink:href="#icon-service-2"></use>
+            </svg>
+            <h3 class="services__title">
+              Always available for assistence
+            </h3>
+          </li>
+        </ul>
+
+        <div class="services__image">
+          <img src="img/services.jpg" alt="services">
+        </div>
+      </section>
+    </div>
+  </div>
 </main>
 
 <?php
