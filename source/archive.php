@@ -10,15 +10,15 @@
           Our <span>apartments</span>
         </h1>
         <div class="toggle toggle--page">
-          <button class="toggle__button toggle__button--page toggle__button--prev--page toggle__button--prev" type="button" name="prev" aria-label="Previous apartament">
+          <button class="toggle__button toggle__button--page toggle__button--prev-page toggle__button--prev" type="button" name="prev" aria-label="Previous apartament">
             <svg class="toggle__icon toggle__icon--page" width="16" height="16">
               <use xlink:href="#icon-arrow-small"></use>
             </svg>
           </button>
 
-          <div class="apartments__fraction"></div>
+          <div class="fraction fraction--header"></div>
 
-          <button class="toggle__button toggle__button--page toggle__button--next--page toggle__button--next" type="button" name="next" aria-label="Next apartament">
+          <button class="toggle__button toggle__button--page toggle__button--next-page toggle__button--next" type="button" name="next" aria-label="Next apartament">
             <svg class="toggle__icon toggle__icon--page" width="16" height="16">
               <use xlink:href="#icon-arrow-small"></use>
             </svg>
@@ -33,32 +33,51 @@
         ?>
           <div class="apartments__item apartments__item--slider swiper-slide">
             <div class="apartments__wrapper apartments__wrapper--page">
-              <div class="apartments__slider apartments__slider--index swiper-container">
-                <ul class="apartments__list swiper-wrapper">
-                  <?php
-                    for ($i=1; $i < 4; $i++) {
-                      ?>
-                      <li class="apartments__slide swiper-slide">
-                        <img src="img/apart-<?= $k; ?>.jpg" alt="apartment">
-                      </li>
-                      <?php
-                    }
-                  ?>
-                </ul>
-                <div class="toggle toggle--index">
-                  <button class="toggle__button toggle__button--index toggle__button--prev--index toggle__button--prev" type="button" name="prev" aria-label="Previous image">
-                    <svg class="toggle__icon toggle__icon--index" width="29" height="10">
-                      <use xlink:href="#icon-arrow-big"></use>
-                    </svg>
-                  </button>
-                  <button class="toggle__button toggle__button--index toggle__button--next--index toggle__button--next" type="button" name="next" aria-label="Next image">
-                    <svg class="toggle__icon toggle__icon--index" width="29" height="10">
-                      <use xlink:href="#icon-arrow-big"></use>
-                    </svg>
-                  </button>
+              <div class="apartments__left">
+                <div class="apartments__slider apartments__slider--page swiper-container" data-thumbs="thumbs-<?= $k; ?>">
+                  <ul class="apartments__list apartments__list--page swiper-wrapper">
+                    <?php
+                      for ($i=1; $i < 7; $i++) {
+                        ?>
+                        <li class="apartments__slide apartments__slide--page swiper-slide">
+                          <img data-src="img/apart-<?= $k; ?>.jpg" class="swiper-lazy" alt="apartment">
+                          <div class="swiper-lazy-preloader"></div>
+                        </li>
+                        <?php
+                      }
+                    ?>
+                  </ul>
+                  <div class="toggle toggle--index">
+                    <button class="toggle__button toggle__button--index toggle__button--prev--page toggle__button--prev" type="button" name="prev" aria-label="Previous image">
+                      <svg class="toggle__icon toggle__icon--index" width="29" height="10">
+                        <use xlink:href="#icon-arrow-big"></use>
+                      </svg>
+                    </button>
+                    <button class="toggle__button toggle__button--index toggle__button--next--page toggle__button--next" type="button" name="next" aria-label="Next image">
+                      <svg class="toggle__icon toggle__icon--index" width="29" height="10">
+                        <use xlink:href="#icon-arrow-big"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="fraction fraction--page"></div>
+                  <div class="apartments__mask"></div>
                 </div>
-              </div>
+                <div class="thumbs swiper-container" id="thumbs-<?= $k; ?>">
+                  <div class="thumbs__list swiper-wrapper">
+                    <?php
+                      for ($p=1; $p < 7; $p++) {
+                        ?>
+                        <div class="thumbs__item swiper-slide">
+                          <img data-src="img/apart-<?= $k; ?>.jpg" class="swiper-lazy" alt="apartment">
+                          <div class="swiper-lazy-preloader"></div>
+                        </div>
+                        <?php
+                      }
+                    ?>
+                  </div>
+                </div>
 
+              </div>
               <div class="apartments__content">
                 <p class="rating">
                   <span class="rating__average">

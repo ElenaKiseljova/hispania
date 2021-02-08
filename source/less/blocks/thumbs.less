@@ -1,0 +1,27 @@
+.thumbs {
+  .w100();
+  height: 131px;
+
+  margin-top: 10px;
+}
+
+.thumbs__item {
+  &.swiper-slide {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 4px;
+
+    overflow: hidden;
+
+    pointer-events: all!important;
+  }
+
+  & img {
+    width: auto;
+    max-width: none;
+    height: 100%;
+  }
+}

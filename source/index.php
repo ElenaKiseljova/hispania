@@ -50,12 +50,13 @@
         ?>
           <li class="apartments__item apartments__item--index">
             <div class="apartments__slider apartments__slider--index swiper-container">
-              <ul class="apartments__list swiper-wrapper">
+              <ul class="apartments__list apartments__list--index swiper-wrapper">
                 <?php
                   for ($i=1; $i < 4; $i++) {
                     ?>
                     <li class="apartments__slide swiper-slide">
-                      <img src="img/apart-<?= $k; ?>.jpg" alt="apartment">
+                      <img data-src="img/apart-<?= $k; ?>.jpg" class="swiper-lazy" alt="apartment">
+                      <div class="swiper-lazy-preloader"></div>
                     </li>
                     <?php
                   }
