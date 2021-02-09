@@ -76,65 +76,194 @@
                     ?>
                   </div>
                 </div>
-
+                <p class="apartments__price apartments__price--page">
+                  <span class="apartments__from apartments__from--page">
+                    From
+                  </span>
+                  <span class="apartments__count apartments__count--page">
+                    55
+                  </span>
+                  <span class="apartments__currency apartments__currency--page">
+                    $
+                  </span>
+                  <span class="apartments__period apartments__period--page">
+                    /night
+                  </span>
+                </p>
               </div>
-              <div class="apartments__content">
-                <p class="rating">
-                  <span class="rating__average">
-                    4.68
-                  </span>
-                  <span class="rating__count">
-                    (22)
-                  </span>
-                </p>
-
-                <h3 class="title title--apartments-inner">
+              <div class="apartments__content apartments__content--page">
+                <h2 class="title title--apartments-page">
                   Luxurious Seaview Apartment 50m at Playa del Cura
-                </h3>
+                </h2>
 
-                <ul class="apartments__advantages">
-                  <li>
-                    6 guests
-                  </li>
-                  <li>
-                    3 bedrooms
-                  </li>
-                  <li>
-                    5 beds
-                  </li>
-                  <li>
-                    2 baths
-                  </li>
-                </ul>
-
-                <p class="text text--apartment">
-                  Looking for space, comfort and a touch of luxury? This apartment has sea views and a fantastic location with easy access to the natural pools of Torrevieja and the beach «Playa del Cura». No rental car is required here.
-                </p>
-                <p class="text text--apartment">
-                  Drink your coffee while watching the sea. The location is central next to the beach, restaurants and many shops. The supermarket is in the same street and public transport is within walking distance.
-                </p>
-
-                <div class="apartments__bottom">
-                  <p class="apartments__price">
-                    <span class="apartments__from">
-                      From
+                <div class="apartament__top">
+                  <p class="rating rating--page">
+                    <span class="rating__average">
+                      4.68
                     </span>
-                    <span class="apartments__count">
-                      55
+                    <span class="rating__count">
+                      (22)
                     </span>
-                    <span class="apartments__currency">
-                      $
-                    </span>
-                    <span class="apartments__period">
-                      /night
+                    <span class="rating__place">
+                      on Airbnb
                     </span>
                   </p>
 
-                  <a class="apartments__more" href="#">
-                    More info
+                  <button class="subline subline--location" type="button" name="location">
+                    <svg width="14" height="14">
+                      <use xlink:href="#icon-location"></use>
+                    </svg>
                     <span>
+                      Location
                     </span>
-                  </a>
+                  </button>
+                </div>
+
+                <ul class="features features--page">
+                  <li class="features__item features__item--page">
+                    <svg width="20" height="20">
+                      <use xlink:href="#icon-guests"></use>
+                    </svg>
+                    <h4 class="features__title features__title--page">
+                      6 guests
+                    </h4>
+                  </li>
+                  <li class="features__item features__item--page">
+                    <svg width="20" height="20">
+                      <use xlink:href="#icon-bedrooms"></use>
+                    </svg>
+                    <h4 class="features__title features__title--page">
+                      3 bedrooms
+                    </h4>
+                  </li>
+                  <li class="features__item features__item--page">
+                    <svg width="24" height="24">
+                      <use xlink:href="#icon-beds"></use>
+                    </svg>
+                    <h4 class="features__title features__title--page">
+                      5 beds
+                    </h4>
+                  </li>
+                  <li class="features__item features__item--page">
+                    <svg width="24" height="24">
+                      <use xlink:href="#icon-baths"></use>
+                    </svg>
+                    <h4 class="features__title features__title--page">
+                      2 baths
+                    </h4>
+                  </li>
+                </ul>
+
+                <div class="apartments__text">
+                  <p>
+                    Looking for space, comfort and a touch of luxury? This apartment has sea views and a fantastic location with easy access to the natural pools of Torrevieja and the beach "Playa del Cura". No rental car is required here. Drink your coffee while watching the sea. The location is central next to the beach, restaurants and many shops. The supermarket is in the same street and public transport is within walking distance.
+                    <br>
+                    Bye for now...
+                  </p>
+                </div>
+
+                <h3 class="title title--small">
+                  Sleeping arrangements
+                </h3>
+
+                <ul class="sleeping">
+                  <li class="sleeping__item">
+                    <div class="sleeping__icons">
+                      <svg width="30" height="30">
+                        <use xlink:href="#icon-queen-bed"></use>
+                      </svg>
+                    </div>
+
+                    <h4 class="sleeping__title">
+                      Bedroom 1
+                    </h4>
+
+                    <p class="sleeping__text">
+                      1 queen bed
+                    </p>
+                  </li>
+                  <li class="sleeping__item">
+                    <div class="sleeping__icons">
+                      <svg width="30" height="30">
+                        <use xlink:href="#icon-single-bed"></use>
+                      </svg>
+                      <svg width="30" height="30">
+                        <use xlink:href="#icon-single-bed"></use>
+                      </svg>
+                    </div>
+
+                    <h4 class="sleeping__title">
+                      Bedroom 2
+                    </h4>
+
+                    <p class="sleeping__text">
+                      2 single beds
+                    </p>
+                  </li>
+                  <li class="sleeping__item">
+                    <div class="sleeping__icons">
+                      <svg width="30" height="30">
+                        <use xlink:href="#icon-single-bed"></use>
+                      </svg>
+                      <svg width="30" height="30">
+                        <use xlink:href="#icon-single-bed"></use>
+                      </svg>
+                    </div>
+
+                    <h4 class="sleeping__title">
+                      Bedroom 3
+                    </h4>
+
+                    <p class="sleeping__text">
+                      2 single beds
+                    </p>
+                  </li>
+                </ul>
+
+                <h3 class="title title--small">
+                  Amenities
+                </h3>
+
+                <div class="amenities">
+                  <ul>
+                    <?php
+                      for ($i=1; $i < 21; $i++) :
+                    ?>
+                    <li>
+                      Carbon <?= $i ?>
+                    </li>
+                    <?php
+                      endfor;
+                    ?>
+                  </ul>
+                  <button class="subline subline--showall" type="button" name="showall">
+                    <span>Show all</span>
+                  </button>
+                </div>
+
+                <div class="apartments__bottom apartments__bottom--page">
+                  <div class="check">
+                    <h3 class="check__title">
+                      Check availability, actual price and testimonials on AIRBNB
+                    </h3>
+
+                    <a class="button button--check-airbnb" href="#">
+                      Check on Airbnb
+                    </a>
+
+                    <p class="check__text">
+                      or
+                    </p>
+
+                    <h3 class="check__title">
+                      Contact us directly and we will answer all your questions
+                    </h3>
+
+                    <a class="button button--check-contact" href="/contact-us.php">
+                      Contact us
+                    </a>
+                  </div>
+
                 </div>
               </div>
             </div>

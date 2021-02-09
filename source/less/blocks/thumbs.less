@@ -23,5 +23,36 @@
     width: auto;
     max-width: none;
     height: 100%;
+
+    &.swiper-lazy {
+      opacity: 0;
+
+      transition: opacity 0.2s;
+    }
+
+    &.swiper-lazy.swiper-lazy-loaded {
+      opacity: 1;
+
+      transition: opacity 0.2s;
+    }
+  }
+}
+
+@media (max-width: 1649px) {
+  .thumbs {
+    height: 100px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .thumbs {
+    height: 60px;
+  }
+
+  .thumbs__item {
+    & img {
+      width: 100%;
+      height: auto;
+    }
   }
 }

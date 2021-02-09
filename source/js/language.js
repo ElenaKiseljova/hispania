@@ -14,6 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
       element.style.height = DEFAULT_LANGUAGE_HEIGHT + 'px'
     }
 
+    let lastTimeout;
+
     let searchCurrentLanguage = () => {
       var allLanguageLinks = document.querySelectorAll('.glink')
 
@@ -52,14 +54,20 @@ document.addEventListener('DOMContentLoaded', () => {
           }
 
           if (evt.target.closest('.language__list') && evt.target.tagName === 'A') {
-            searchCurrentLanguage();
+            if (lastTimeout) {
+              clearTimeout(lastTimeout);
+            }
+
+            lastTimeout = setTimeout(() => {
+              searchCurrentLanguage()
+            }, 500)
           }
         })
       }
 
     });
 
-    searchCurrentLanguage();
+    searchCurrentLanguage()
   } catch (e) {
     console.log(e);
   }

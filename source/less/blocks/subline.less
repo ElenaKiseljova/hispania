@@ -1,0 +1,48 @@
+.subline {
+  .button_default();
+
+  display: flex;
+
+  justify-content: flex-start;
+  align-items: center;
+
+  font-family: @font2;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+
+  & svg {
+    margin-right: 8px;
+
+    fill: #0F5CB9;
+
+    transition: fill 0.3s;
+  }
+
+  & span {
+    color: #0F5CB9;
+
+    border-bottom: 1px dashed #0F5CB9;
+
+    transition: color 0.3s,  border-color 0.3s;
+  }
+
+  &:hover,
+  &:focus {
+    & svg {
+      fill: #F2994A;
+
+      transition: fill 0.3s;
+    }
+
+    & span {
+      color: #F2994A;
+
+      border-color: #F2994A;
+
+      transition: color 0.3s,  border-color 0.3s;
+    }
+  }
+}

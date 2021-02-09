@@ -21,6 +21,14 @@
 
     width: 230px;
   }
+
+  &--palm {
+    align-items: center;
+
+    width: 120px;
+
+    margin-bottom: 23px;
+  }
 }
 
 .toggle__button {
@@ -35,14 +43,23 @@
 
   transition: background-color 0.3s;
 
+  &.swiper-button-disabled {
+    opacity: 0.7;
+
+    pointer-events: none;
+  }
+
   &--prev {
     transform: rotate(180deg);
   }
 
-  &:hover,
-  &:focus {
-    & .toggle__icon {
-      fill: #ffffff;
+  &--index,
+  &--page {
+    &:hover,
+    &:focus {
+      & .toggle__icon {
+        fill: #ffffff;
+      }
     }
   }
 
@@ -82,6 +99,17 @@
     }
   }
 
+  &--palm {
+    width: 20px;
+    height: 20px;
+
+    &:hover,
+    &:focus {
+      & .toggle__icon {
+        fill: #F2994A;
+      }
+    }
+  }
 }
 
 .toggle__icon {
@@ -92,6 +120,10 @@
   }
 
   &--page {
-    fill: #5D6D7F
+    fill: #5D6D7F;
+  }
+
+  &--palm {
+    fill: #5D6D7F;
   }
 }

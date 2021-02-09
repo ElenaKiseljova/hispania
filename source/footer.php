@@ -27,10 +27,10 @@
           <nav class="navigation navigation--footer" role="navigation">
             <ul class="navigation__list navigation__list--footer">
               <li>
-                <a href="#">Data protection</a>
+                <a href="/privacy-policy.php">Data protection</a>
               </li>
               <li>
-                <a href="#">Privacy Policy</a>
+                <a href="/privacy-policy.php">Privacy Policy</a>
               </li>
             </ul>
           </nav>
@@ -38,7 +38,7 @@
         </div>
 
         <div class="page-footer__contact">
-          <a class="button button--footer" href="#">Contact us</a>
+          <a class="button button--footer" href="/contact-us.php">Contact us</a>
         </div>
       </div>
     </footer>
@@ -64,6 +64,10 @@
     <!-- contact form -->
 
     <script src="js/form.min.js"></script>
+
+    <!-- apartments page -->
+
+    <script src="js/apartments.min.js"></script>
 
     <!-- start GTranslate: https://gtranslate.io/ Styles & Scripts -->
     <style>

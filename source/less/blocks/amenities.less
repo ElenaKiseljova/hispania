@@ -1,0 +1,58 @@
+.amenities,
+.amenities ul {
+  .w100();
+}
+
+.amenities {
+  & ul {
+    height: 145px;
+
+    margin-bottom: 24px;
+
+    column-count: 3;
+    column-gap: normal;
+
+    list-style: none;
+
+    overflow: hidden;
+
+    &.active {
+      height: auto;
+    }
+
+    & li {
+      position: relative;
+
+      padding: 0;
+      margin: 0;
+
+      padding-left: 23px;
+      margin-bottom: 12px;
+
+      font-weight: 400;
+
+      color: #010B3D;
+
+      font-family: @font2;
+      font-style: normal;
+
+      font-size: 16px;
+      line-height: 19px;
+
+      &::before {
+        content: '';
+
+        position: absolute;
+
+        top: 6px;
+        left: 0;
+
+        width: 7px;
+        height: 7px;
+
+        background-color: #F2994A;
+        border-radius: 50%;
+      }
+    }
+  }
+}

@@ -1,0 +1,50 @@
+.privacy {
+  width: 730px;
+  max-width: 100%;
+
+  padding: 0;
+  margin-right: auto;
+
+  padding-top: 160px;
+  padding-bottom: 160px;
+
+  & h2,
+  & p {
+    padding-left: 23px;
+
+    font-family: @font2;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+
+    color: #000000;
+  }
+
+  & h2 {
+    margin-bottom: 24px;
+  }
+
+  & p {
+    position: relative;
+
+    &:not(:last-of-type) {
+      margin-bottom: 24px;
+    }
+
+    &::before {
+      content: '';
+
+      position: absolute;
+
+      top: 8px;
+      left: 0;
+
+      width: 7px;
+      height: 7px;
+
+      background-color: #F2994A;
+      border-radius: 50%;
+    }
+  }
+}

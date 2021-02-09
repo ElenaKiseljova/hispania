@@ -17,15 +17,17 @@
 
   border-radius: 6px;
 
-  transition: background-color 0.5s, color 0.3s;
+  transition: background-color 0.3s, color 0.3s;
 
   &:hover,
   &:focus {
-    transition: background-color 0.5s, color 0.3s;
+    transition: background-color 0.3s, color 0.3s;
   }
 
   &--promo,
-  &--contact {
+  &--contact,
+  &--check-airbnb,
+  &--palm {
     padding: 17px 15px;
 
     background-color: #F2994A;
@@ -41,11 +43,14 @@
     margin-bottom: 133px;
   }
 
-  &--footer {
+  &--footer,
+  &--check-contact {
     padding: 15px;
 
     border: 2px solid #F2994A;
+  }
 
+  &--footer {
     background-color: #F2994A;
 
     &:hover,
@@ -53,6 +58,18 @@
       background-color: #ffffff;
 
       color: #F2994A;
+    }
+  }
+
+  &--check-contact {
+    background-color: #ffffff;
+
+    color: #F2994A;
+
+    &:hover,
+    &:focus {
+      background-color: #F2994A;
+      color: #ffffff;
     }
   }
 }

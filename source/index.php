@@ -17,7 +17,7 @@
           We are here to help you with your next holiday and we take care to ensure you are matched with your ideal holiday accommodation
         </p>
 
-        <a class="button button--promo" href="#">
+        <a class="button button--promo" href="/contact-us.php">
           Order a consultation
         </a>
         <div class="promo__bottom">
@@ -76,8 +76,8 @@
               </div>
             </div>
 
-            <div class="apartments__content">
-              <p class="rating">
+            <div class="apartments__content apartments__content--index">
+              <p class="rating rating--index">
                 <span class="rating__average">
                   4.68
                 </span>
@@ -90,40 +90,55 @@
                 Luxurious Seaview Apartment 50m at Playa del Cura
               </h3>
 
-              <ul class="apartments__advantages">
-                <li>
-                  6 guests
+              <ul class="features features--index">
+                <li class="features__item features__item--index">
+                  <h4 class="features__title features__title--index">
+                    6 guests
+                  </h4>
                 </li>
-                <li>
-                  3 bedrooms
+                <li class="features__item features__item--index">
+                  <h4 class="features__title features__title--index">
+                    3 bedrooms
+                  </h4>
                 </li>
-                <li>
-                  5 beds
+                <li class="features__item features__item--index">
+                  <h4 class="features__title features__title--index">
+                    5 beds
+                  </h4>
                 </li>
-                <li>
-                  2 baths
+                <li class="features__item features__item--index">
+                  <h4 class="features__title features__title--index">
+                    2 baths
+                  </h4>
                 </li>
               </ul>
 
               <p class="text text--apartment">
-                Looking for space, comfort and a touch of luxury? This apartment has sea views and a fantastic location with easy access to the natural pools of Torrevieja and the beach «Playa del Cura». No rental car is required here.
-              </p>
+                </p>
               <p class="text text--apartment">
-                Drink your coffee while watching the sea. The location is central next to the beach, restaurants and many shops. The supermarket is in the same street and public transport is within walking distance.
-              </p>
 
-              <div class="apartments__bottom">
-                <p class="apartments__price">
-                  <span class="apartments__from">
+              </p>
+              <div class="apartments__text">
+                <p>
+                  Looking for space, comfort and a touch of luxury? This apartment has sea views and a fantastic location with easy access to the natural pools of Torrevieja and the beach «Playa del Cura». No rental car is required here.
+                </p>
+                <p>
+                  Drink your coffee while watching the sea. The location is central next to the beach, restaurants and many shops. The supermarket is in the same street and public transport is within walking distance.
+                </p>
+              </div>
+
+              <div class="apartments__bottom apartments__bottom--index">
+                <p class="apartments__price apartments__price--index">
+                  <span class="apartments__from apartments__from--index">
                     From
                   </span>
-                  <span class="apartments__count">
+                  <span class="apartments__count apartments__count--index">
                     55
                   </span>
-                  <span class="apartments__currency">
+                  <span class="apartments__currency apartments__currency--index">
                     $
                   </span>
-                  <span class="apartments__period">
+                  <span class="apartments__period apartments__period--index">
                     /night
                   </span>
                 </p>
@@ -155,15 +170,38 @@
         </p>
 
         <form class="contact__form" id="contact-index" action="" method="post">
-          <label class="contact__label" for="name-1">Name</label>
-          <input class="contact__field" id="name-1" type="text" name="name-1" placeholder="Name" required>
-          <label class="contact__label" for="email-1">E-mail</label>
-          <input class="contact__field" id="email-1" type="email" name="email-1" placeholder="E-mail" required>
-          <label class="contact__label" for="phone-1">Phone number</label>
-          <input class="contact__field" id="phone-1" type="tel" name="phone-1" placeholder="Phone number" required>
+          <div class="contact__row">
+            <label class="contact__label" for="name-1">Name</label>
+            <input class="contact__field" id="name-1" type="text" name="name-1" placeholder="Name" required>
 
-          <label class="contact__label" for="message-1">Your message</label>
-          <textarea class="contact__field contact__field--message" id="message-1" name="message-1" placeholder="Tell us about approximate dates of staying, number of guests, apartment you like. and we will answer you about the possibility of booking an apartment for this time" required></textarea>
+            <span class="contact__error">
+              Error
+            </span>
+          </div>
+          <div class="contact__row">
+            <label class="contact__label" for="email-1">E-mail</label>
+            <input class="contact__field" id="email-1" type="email" name="email-1" placeholder="E-mail" required>
+
+            <span class="contact__error">
+              Error
+            </span>
+          </div>
+          <div class="contact__row">
+            <label class="contact__label" for="phone-1">Phone number</label>
+            <input class="contact__field" id="phone-1" type="tel" name="phone-1" placeholder="Phone number" required>
+
+            <span class="contact__error">
+              Error
+            </span>
+          </div>
+          <div class="contact__row contact__row--message">
+            <label class="contact__label" for="message-1">Your message</label>
+            <textarea class="contact__field contact__field--message" id="message-1" name="message-1" placeholder="Tell us about approximate dates of staying, number of guests, apartment you like. and we will answer you about the possibility of booking an apartment for this time" required></textarea>
+
+            <span class="contact__error">
+              Error
+            </span>
+          </div>
 
           <button class="button button--contact" type="submit" name="contact-1">
             Contact us

@@ -30,7 +30,11 @@ document.addEventListener('DOMContentLoaded', () => {
         },
       });
     }
+  } catch (e) {
+    console.log(e);
+  }
 
+  try {
     let sufixSliders = ['--index', '--page'];
 
     sufixSliders.forEach((item, i) => {
@@ -59,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
           };
 
           let idThumb = slider.getAttribute('data-thumbs');
-          console.log(idThumb);
+
           var galleryThumbs;
 
           if (idThumb) {
@@ -96,6 +100,40 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
+  } catch (e) {
+    console.log(e);
+  }
+
+  try {
+    let contactSlider = document.querySelector('.palm__container');
+
+    if (contactSlider) {
+      let contactSwiper = new Swiper(contactSlider, {
+        spaceBetween: 0,
+        slidesPerView: 1,
+        effect: 'fade',
+        fadeEffect: {
+          crossFade: true
+        },
+        allowTouchMove: false,
+        autoHeight: true,
+        pagination: {
+          el: '.fraction--palm',
+          type: 'custom',
+          renderCustom: function (swiper, current, total) {
+            function numberAppend(d) {
+              return (d < 10) ? '0' + d.toString() : d.toString();
+            }
+            return '<span class="swiper-pagination-current">' + numberAppend(current) + '</span>' +
+                   '<span class="swiper-pagination-total">' + ' / ' + numberAppend(total) + '</span>';
+          }
+        },
+        navigation: {
+          nextEl: '.toggle__button--next-palm',
+          prevEl: '.toggle__button--prev-palm',
+        },
+      });
+    }
   } catch (e) {
     console.log(e);
   }
