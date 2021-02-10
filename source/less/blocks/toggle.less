@@ -29,6 +29,21 @@
 
     margin-bottom: 23px;
   }
+
+  &--popup {
+    position: absolute;
+
+    top: calc(50% - 30.5px);
+    left: 0;
+
+    z-index: 1000;
+
+    align-items: center;
+
+    width: 100%;
+
+    transform: translateY(-50%);
+  }
 }
 
 .toggle__button {
@@ -125,5 +140,9 @@
 
   &--palm {
     fill: #5D6D7F;
+  }
+
+  &--popup {
+    fill: #FFFFFF;
   }
 }

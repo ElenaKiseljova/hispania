@@ -43,14 +43,57 @@
       </div>
     </footer>
 
-    <section class="popup">
+    <?php
+     $images = [
+       '1' => ['img/apart-1.jpg', 'img/apart-1.jpg', 'img/apart-1.jpg', 'img/apart-1.jpg'],
+       '2' => ['img/apart-2.jpg', 'img/apart-2.jpg', 'img/apart-2.jpg', 'img/apart-2.jpg'],
+       '3' => ['img/apart-3.jpg', 'img/apart-3.jpg', 'img/apart-3.jpg', 'img/apart-3.jpg'],
+     ];
+    ?>
+    <script type="text/javascript">
+      var sliderImages = '<?php echo json_encode( $images ); ?>';
+    </script>
+
+    <div class="popup popup--slider">
+      <div class="popup__slider swiper-container">
+        <ul class="popup__list swiper-wrapper">
+
+        </ul>
+        <div class="toggle toggle--popup">
+          <button class="toggle__button toggle__button--popup toggle__button--prev-popup toggle__button--prev" type="button" name="prev" aria-label="Previous apartament">
+            <svg class="toggle__icon toggle__icon--popup" width="16" height="16">
+              <use xlink:href="#icon-arrow-small"></use>
+            </svg>
+          </button>
+
+          <button class="toggle__button toggle__button--popup toggle__button--next-popup toggle__button--next" type="button" name="next" aria-label="Next apartament">
+            <svg class="toggle__icon toggle__icon--popup" width="16" height="16">
+              <use xlink:href="#icon-arrow-small"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="fraction fraction--popup"></div>
+      </div>
+
+      <button class="popup__close" type="button" name="close">
+        <span class="visually-hidden">Закрыть</span>
+      </button>
+    </div>
+
+    <div class="popup popup--map">
       <div class="popup__wrapper">
+        <h2 class="popup__title">
+          Calle Sol, 179, 03184 Torrevieja, Alicante, Spanien
+        </h2>
         <button class="popup__close" type="button" name="close">
           <span class="visually-hidden">Закрыть</span>
         </button>
       </div>
-    </section>
-
+      <div class="popup__map">
+        <iframe class="popup__iframe" src="" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
+        </iframe>
+      </div>
+    </div>
     <div class="popup__overlay"></div>
 
     <!-- header -->
@@ -68,6 +111,7 @@
     <!-- apartments page -->
 
     <script src="js/apartments.min.js"></script>
+    <script src="js/popup.min.js"></script>
 
     <!-- start GTranslate: https://gtranslate.io/ Styles & Scripts -->
     <style>

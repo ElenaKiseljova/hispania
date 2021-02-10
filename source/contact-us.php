@@ -61,7 +61,7 @@
                 <label class="palm__label" for="apartment-1">
                   Luxurious Seaview Apartment 50m at Playa del Cura
                 </label>
-                <a class="palm__more" href="#">
+                <a class="palm__more" href="archive.php?apart=0">
                   More info
                 </a>
               </p>
@@ -70,7 +70,7 @@
                 <label class="palm__label" for="apartment-2">
                   Romantic house at red lake in Torrevieja
                 </label>
-                <a class="palm__more" href="#">
+                <a class="palm__more" href="archive.php?apart=1">
                   More info
                 </a>
               </p>
@@ -79,14 +79,14 @@
                 <label class="palm__label" for="apartment-3">
                   Apartment near the white church on Plaza de Oriente
                 </label>
-                <a class="palm__more" href="#">
+                <a class="palm__more" href="archive.php?apart=2">
                   More info
                 </a>
               </p>
             </div>
 
             <div class="palm__slide swiper-slide">
-              <h3 class="palm__title">
+              <h3 class="palm__title palm__title--message">
                 Leave your message
               </h3>
               <p class="palm__text">
@@ -117,30 +117,34 @@
 </main>
 
 <template id="success">
-  <h2 class="palm__thanks-title">
-    Thanks for the application!
-  </h2>
+  <div class="palm__final">
+    <h2 class="palm__thanks-title">
+      Thanks for the application!
+    </h2>
 
-  <p class="palm__thanks-text">
-    We will contact you soon
-  </p>
+    <p class="palm__thanks-text">
+      We will contact you soon
+    </p>
 
-  <button class="button button--palm" type="button" name="home">
-    Back to mainpage
-  </button>
+    <a class="button button--palm" href="/">
+      Back to mainpage
+    </a>
+  </div>
 </template>
 <template id="fail">
-  <h2 class="palm__thanks-title">
-    Something went wrong...
-  </h2>
+  <div class="palm__final">
+    <h2 class="palm__thanks-title">
+      Something went wrong...
+    </h2>
 
-  <p class="palm__thanks-text">
-    Please try again send form later or call us by phone or send mail
-  </p>
+    <p class="palm__thanks-text">
+      Please try again send form later or call us by phone or send mail
+    </p>
 
-  <button class="button button--palm" type="button" name="home">
-    Back to mainpage
-  </button>
+    <a class="button button--palm" href="/">
+      Back to mainpage
+    </a>
+  </div>
 </template>
 <?php
   include("footer.php");

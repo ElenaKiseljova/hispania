@@ -143,7 +143,7 @@
                   </span>
                 </p>
 
-                <a class="apartments__more" href="#">
+                <a class="apartments__more" href="archive.php<?php $new_k = $k - 1; echo '?apart=' . $new_k; ?>">
                   More info
                   <span>
                   </span>

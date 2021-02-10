@@ -39,7 +39,7 @@
                     <?php
                       for ($i=1; $i < 7; $i++) {
                         ?>
-                        <li class="apartments__slide apartments__slide--page swiper-slide">
+                        <li class="apartments__slide apartments__slide--page swiper-slide openpopup" data-apartment="<?= $k; ?>" data-popup="slider">
                           <img data-src="img/apart-<?= $k; ?>.jpg" class="swiper-lazy" alt="apartment">
                           <div class="swiper-lazy-preloader"></div>
                         </li>
@@ -109,7 +109,7 @@
                     </span>
                   </p>
 
-                  <button class="subline subline--location" type="button" name="location">
+                  <button class="subline subline--location openpopup" type="button" name="location" data-popup="map" data-href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3144.049812333737!2d-0.7062238846758869!3d37.9992985797191!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd63a9b844c8abb3%3A0xd803bb499b04a308!2zQ2FsbGUgU29sLCAxNzksIDAzMTg0IFRvcnJldmllamEsIEFsaWNhbnRlLCDQmNGB0L_QsNC90LjRjw!5e0!3m2!1sru!2sua!4v1612976727640!5m2!1sru!2sua">
                     <svg width="14" height="14">
                       <use xlink:href="#icon-location"></use>
                     </svg>
@@ -273,6 +273,7 @@
         ?>
       </div>
     </div>
+
   </section>
 </main>
 
