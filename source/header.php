@@ -34,6 +34,9 @@
           </div>
 
           <nav class="navigation navigation--header" role="menu">
+            <h5 class="navigation__title">Menu</h5>
+            <button class="navigation__close" type="button" name="close-menu">
+            </button>
             <ul class="navigation__list navigation__list--header">
               <li>
                 <a href="/archive.php">Our projects</a>
@@ -43,6 +46,11 @@
               </li>
             </ul>
           </nav>
+          <button class="navigation__toggle" type="button" name="open-menu" aria-label="Mobile menu toggle">
+            <svg width="33" height="22">
+              <use xlink:href="#icon-menu"></use>
+            </svg>
+          </button>
         </div>
       </div>
     </header>

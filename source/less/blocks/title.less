@@ -20,6 +20,8 @@
 
     color: #010B3D;
 
+    word-wrap: break-word;
+
     & span {
       color: #0F5CB9;
     }
@@ -112,6 +114,69 @@
     &--promo {
       font-size: 80px;
       line-height: 100%;
+    }
+  }
+}
+
+@media (max-width: 1022px) {
+  .title {
+    &--promo {
+      margin-bottom: 32px;
+
+      font-size: 48px;
+      line-height: 100%;
+    }
+
+    &--apartments {
+      margin-bottom: 64px;
+    }
+  }
+}
+
+@media (max-width: 909px) {
+  .title {
+    &--services {
+      margin-left: 0;
+    }
+
+    &--contact-page {
+      margin-bottom: 64px;
+    }
+
+    &--contact {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (max-width: 689px) {
+  .title {
+    &--page {
+      width: 100%;
+
+      font-size: 48px;
+      line-height: 100%
+    }
+  }
+
+  .title--page + .toggle {
+    margin-top: 56px;
+  }
+}
+
+@media (max-width: 569px) {
+  .title {
+    &--small {
+      margin-top: 32px;
+      margin-bottom: 24px;
+    }
+  }
+}
+
+@media (max-width: 424px) {
+  .title {
+    &--apartments-inner {
+      margin-bottom: 4px;
     }
   }
 }

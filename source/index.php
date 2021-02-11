@@ -74,6 +74,7 @@
                   </svg>
                 </button>
               </div>
+              <div class="apartments__pagination swiper-pagination"></div>
             </div>
 
             <div class="apartments__content apartments__content--index">
@@ -174,7 +175,7 @@
             <label class="contact__label" for="name-1">Name</label>
             <input class="contact__field" id="name-1" type="text" name="name-1" placeholder="Name" required>
 
-            <span class="contact__error">
+            <span class="error error--contact">
               Error
             </span>
           </div>
@@ -182,7 +183,7 @@
             <label class="contact__label" for="email-1">E-mail</label>
             <input class="contact__field" id="email-1" type="email" name="email-1" placeholder="E-mail" required>
 
-            <span class="contact__error">
+            <span class="error error--contact">
               Error
             </span>
           </div>
@@ -190,7 +191,7 @@
             <label class="contact__label" for="phone-1">Phone number</label>
             <input class="contact__field" id="phone-1" type="tel" name="phone-1" placeholder="Phone number" required>
 
-            <span class="contact__error">
+            <span class="error error--contact">
               Error
             </span>
           </div>
@@ -198,7 +199,7 @@
             <label class="contact__label" for="message-1">Your message</label>
             <textarea class="contact__field contact__field--message" id="message-1" name="message-1" placeholder="Tell us about approximate dates of staying, number of guests, apartment you like. and we will answer you about the possibility of booking an apartment for this time" required></textarea>
 
-            <span class="contact__error">
+            <span class="error error--contact">
               Error
             </span>
           </div>

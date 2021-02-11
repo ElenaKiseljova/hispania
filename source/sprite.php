@@ -7,6 +7,11 @@
       <rect width="46" height="46" fill="white" transform="translate(25 25)"/>
     </clipPath>
   </defs>
+  <symbol id="icon-menu" viewBox="0 0 33 22">
+    <rect width="33" height="2" rx="1" />
+    <rect y="10" width="24" height="2" rx="1" />
+    <rect y="20" width="30" height="2" rx="1" />
+  </symbol>
   <symbol id="icon-arrow-big" viewBox="0 0 29 10">
     <path d="M23.3475 -6.68755e-08L22.1558 1.05412L25.7738 4.25451L3.27763e-08 4.25451L9.79491e-08 5.74549L25.7738 5.74549L22.1558 8.94588L23.3475 10L29 5L23.3475 -6.68755e-08Z"/>
   <symbol id="icon-arrow-small" viewBox="0 0 16 16">

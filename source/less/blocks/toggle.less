@@ -146,3 +146,30 @@
     fill: #FFFFFF;
   }
 }
+
+@media (max-width: 1022px) {
+  .toggle {
+    &--popup {
+      top: auto;
+      bottom: 10px;
+
+      width: calc(100% - 30px);
+      margin-left: 15px;
+      margin-right: 15px;
+    }
+  }
+}
+
+@media (max-width: 499px) {
+  .toggle__button {
+    &--index {
+      width: 54px;
+      height: 39px;
+    }
+  }
+  .toggle__icon {
+    &--index {
+      width: 16.62px;
+    }
+  }
+}

@@ -68,6 +68,16 @@ document.addEventListener('DOMContentLoaded', () => {
             },
           };
 
+          let paginationSlider = document.querySelector('.apartments__pagination');
+
+          if (paginationSlider) {
+            dataInitial.pagination = {
+              el: '.swiper-pagination',
+              type: 'bullets',
+              clickable: true,
+            }
+          }
+
           let idThumb = slider.getAttribute('data-thumbs');
 
           var galleryThumbs;
@@ -86,11 +96,18 @@ document.addEventListener('DOMContentLoaded', () => {
               // Enable lazy loading
               lazy: true,
               loop: true,
-              spaceBetween: 10,
+              spaceBetween: 6,
               slidesPerView: 5,
               freeMode: true,
               watchSlidesVisibility: true,
               watchSlidesProgress: true,
+              // Responsive breakpoints
+              breakpoints: {
+                // when window width is >= 570px
+                570: {
+                  spaceBetween: 10
+                },
+              }
             });
 
             dataInitial.thumbs = {

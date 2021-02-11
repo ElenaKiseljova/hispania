@@ -3,9 +3,9 @@
 ?>
 
 <main class="page-main">
-  <section class="palm">
+  <section class="palm palm--404">
     <div class="palm__wrapper palm__wrapper--404">
-      <div class="palm__content">
+      <div class="palm__content palm__content--404">
         <h1 class="palm__404-title">
           404
         </h1>
@@ -17,7 +17,7 @@
           Back to mainpage
         </a>
       </div>
-      <div class="palm__image">
+      <div class="palm__image palm__image--404">
         <img src="img/palm.png" alt="palm">
       </div>
     </div>

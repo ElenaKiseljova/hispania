@@ -77,3 +77,34 @@
   padding: 0;
   margin: 0;
 }
+
+@media (max-width: 1022px) {
+  .page-footer__center {
+    width: 30%;
+  }
+}
+
+@media (max-width: 890px) {
+  .page-footer {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .page-footer__left,
+  .page-footer__center,
+  .page-footer__contact {
+    width: 100%;
+  }
+
+  .page-footer__left {
+    margin-bottom: 25px;
+  }
+
+  .page-footer__center {
+    flex-wrap: wrap;
+  }
+
+  .page-footer__contact {
+    justify-content: flex-start;
+  }
+}
