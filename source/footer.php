@@ -99,6 +99,7 @@
     <!-- header -->
 
     <script src="js/language.min.js"></script>
+    <script src="js/menu.min.js"></script>
 
     <!-- swiper -->
     <script src="libs/swiper.min.js"></script>
