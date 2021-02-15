@@ -86,12 +86,15 @@ document.addEventListener("DOMContentLoaded", function () {
               }
             } else if (popupName == '.popup--map') {
               let hrefIframeMap = item.getAttribute('data-href');
+              let dataTitleMap = item.getAttribute('data-title');
+              
               let popupIframe = popupItem.querySelector('.popup__iframe');
+              let popupTitle = popupItem.querySelector('.popup__title');
+              //console.log(hrefIframeMap, popupIframe);
 
-              console.log(hrefIframeMap, popupIframe);
-
-              if (hrefIframeMap && popupIframe) {
+              if (hrefIframeMap && popupIframe && popupTitle && dataTitleMap) {
                 popupIframe.src = hrefIframeMap + '&zoom=15';
+                popupTitle.textContent = dataTitleMap;
               }
             }
 

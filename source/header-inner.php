@@ -35,6 +35,7 @@
         <nav class="navigation navigation--header" role="menu">
           <h5 class="navigation__title">Menu</h5>
           <button class="navigation__close" type="button" name="close-menu">
+            <span class="visually-hidden">Close menu</span>
           </button>
           <ul class="navigation__list navigation__list--header-inner">
             <li>
@@ -49,6 +50,7 @@
           <svg width="33" height="22">
             <use xlink:href="#icon-menu"></use>
           </svg>
+          <span class="visually-hidden">Open menu</span>
         </button>
       </div>
     </header>

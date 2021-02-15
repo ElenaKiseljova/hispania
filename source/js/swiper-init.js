@@ -116,7 +116,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
           }
 
-          let apartamentsSwiper = new Swiper(slider, dataInitial);
+          let sliderElements = slider.querySelectorAll('.swiper-slide');
+
+          if (sliderElements.length > 0) {
+            //console.log(sliderElements.length);
+            let apartamentsSwiper = new Swiper(slider, dataInitial);
+          }
         });
       }
     });
@@ -162,29 +167,85 @@ document.addEventListener('DOMContentLoaded', () => {
           if (contactSwiper.activeIndex < 4) {
             contactSwiper.slideNext();
           } else if (contactSwiper.activeIndex === 4) {
-            // ajax
-
             let contentContact = document.querySelector('.palm__content');
 
             let succcessTemplate = document.querySelector('#success').content.querySelector('.palm__final');
             let failTemplate = document.querySelector('#fail').content.querySelector('.palm__final');
 
             if (contentContact && succcessTemplate && failTemplate) {
-              contentContact.innerHTML = '';
+              let nameValue = contentContact.querySelector('input[name*="name"]')
+              let emailValue = contentContact.querySelector('input[name*="email"]')
+              let phoneValue = contentContact.querySelector('input[name*="phone"]')
+              let messageValue = contentContact.querySelector('textarea')
+              let apartments = contentContact.querySelector('input[type="radio"]:checked')
 
-              //contentContact.appendChild(succcessTemplate);
-              contentContact.appendChild(failTemplate);
+              var data = {};
+
+              if (nameValue && emailValue && phoneValue && messageValue && apartments) {
+                data = {
+                  action: 'sendmail',
+                  name: nameValue.value,
+                  email: emailValue.value,
+                  phone: phoneValue.value,
+                  message: messageValue.value,
+                  apartments: apartments.value,
+                };
+
+                (function ($) {
+                  $.ajax({
+                    url: hispania_ajax.url,
+                    data: data,
+                    type: 'POST',
+                    success: function(response){
+                      contentContact.innerHTML = '';
+
+                      contentContact.appendChild(succcessTemplate);
+                    },
+                    error: function (error) {
+                      console.log(error);
+
+                      contentContact.innerHTML = '';
+
+                      contentContact.appendChild(failTemplate);
+                    }
+                  });
+                })(jQuery);
+              }
             }
           }
         });
 
-        contactSwiper.on('slideChange', function () {
+        contactSwiper.on('slideNextTransitionStart', function () {
+          if (contactSwiper.activeIndex !== 3) {
+            contactSwiper.navigation.nextEl.classList.add('disabled');
+            nextButton.classList.add('disabled');
+          }
+
           if (contactSwiper.activeIndex === 3) {
+            nextButton.classList.add('hidden');
+
+            let allRadioButton = contactSlider.querySelectorAll('input[type="radio"]');
+
+            allRadioButton.forEach((item, i) => {
+              item.addEventListener('change', () => {
+                nextButton.classList.add('no-hidden');
+              });
+            });
+
             nextButton.classList.toggle('show-text');
-          } else if (contactSwiper.activeIndex < 3 && nextButton.classList.contains('show-text')) {
-            nextButton.classList.remove('show-text')
           } else if (contactSwiper.activeIndex === 4) {
             nextButton.classList.toggle('show-text');
+          }
+        });
+
+        contactSwiper.on('slidePrevTransitionStart', function () {
+          if (contactSwiper.activeIndex !== 2) {
+            contactSwiper.navigation.nextEl.classList.remove('disabled');
+            nextButton.classList.remove('disabled');
+          }
+
+          if (contactSwiper.activeIndex < 3 && nextButton.classList.contains('show-text')) {
+            nextButton.classList.remove('show-text')
           }
         });
       }

@@ -76,18 +76,6 @@
 
 .contact__form {
   max-width: 492px;
-
-  &.active {
-    & .contact__field {
-      &:invalid {
-        border-color: #EB5757;
-
-        color: #EB5757;
-
-        transition: color 0.3s, border-color 0.3s;
-      }
-    }
-  }
 }
 
 .contact__label {
@@ -129,6 +117,22 @@
     height: 108px;
 
     resize: none;
+  }
+
+  &.active {
+    &:invalid {
+      border-color: #EB5757;
+
+      color: #EB5757;
+
+      transition: color 0.3s, border-color 0.3s;
+
+      & + .error {
+        opacity: 1;
+
+        transition: opacity 0.3s;
+      }
+    }
   }
 
   &:hover,

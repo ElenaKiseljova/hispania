@@ -96,6 +96,8 @@
 }
 
 .palm__text {
+  margin-bottom: 30px;
+
   font-family: @font2;
   font-style: normal;
   font-weight: normal;
@@ -122,15 +124,45 @@
 
   border-bottom: 2px solid #5D6D7F;
 
+  transition: border-color 0.3s;
+
   &--message {
     height: 90px;
 
     resize: none;
+
+    &.more-16 {
+      font-size: 30px;
+      line-height: 130%;
+    }
+
+    &.more-16.more-40 {
+      font-size: 16px;
+      line-height: 130%;
+    }
+  }
+
+  &.active {
+    &:invalid {
+      border-color: #EB5757;
+
+      color: #EB5757;
+
+      transition: color 0.3s, border-color 0.3s;
+
+      & + .error {
+        opacity: 1;
+
+        transition: opacity 0.3s;
+      }
+    }
   }
 
   &:hover,
   &:focus {
     border-color: #F2994A;
+
+    transition: border-color 0.3s;
   }
 }
 
@@ -180,6 +212,10 @@
     & .palm__next-text {
       display: block;
     }
+  }
+
+  &:not(.no-hidden).hidden {
+    opacity: 0;
   }
 }
 
@@ -248,7 +284,7 @@
   position: absolute;
 
   bottom: -60px;
-  right: calc(50% - 50vw);
+  left: 35%;
 
   z-index: 0;
 
@@ -268,6 +304,8 @@
   -webkit-text-fill-color: transparent;
   -ms-color: #fff;
   -ms-text-shadow: -1px -1px 0 #010B3D, 1px -1px 0 #010B3D, -1px 1px 0 #010B3D, 1px 1px 0 #010B3D;
+
+  white-space: nowrap;
 }
 
 .palm__row,
@@ -446,6 +484,11 @@ input[type="radio"]:checked + .palm__label {
   color: #5D6D7F;
 }
 
+ .disabled {
+   pointer-events: none;
+   opacity: 0.7;
+ }
+
 @media (max-width: 1022px) {
   .palm__background {
     bottom: -45px;
@@ -548,6 +591,10 @@ input[type="radio"]:checked + .palm__label {
       width: 100%;
     }
   }
+
+  .palm__more {
+    right: -5px;
+  }
 }
 
 @media (max-width: 680px) {
@@ -569,9 +616,7 @@ input[type="radio"]:checked + .palm__label {
 
 @media (max-width: 499px) {
   .palm__background {
-    right: auto;
     left: 0;
-    white-space: nowrap;
   }
 }
 
