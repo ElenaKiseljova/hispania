@@ -111,7 +111,7 @@
 
     <!-- apartments page -->
 
-    <script src="js/apartments.min.js"></script>
+    <script src="js/show-all.min.js"></script>
     <script src="js/popup.min.js"></script>
 
     <!-- start GTranslate: https://gtranslate.io/ Styles & Scripts -->
