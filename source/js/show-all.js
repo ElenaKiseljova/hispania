@@ -11,7 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (b && showElement) {
           b.addEventListener('click', () => {
-            showElement.classList.toggle('active')
+            b.classList.add('active')
+            showElement.classList.add('active')
           })
         }
       })

@@ -138,7 +138,21 @@
     </div>
   </section>
 </main>
+<template id="before">
+  <div class="palm__final">
+    <h2 class="palm__thanks-title">
+      Form is sending...
+    </h2>
 
+    <p class="palm__thanks-text">
+      Please wait
+    </p>
+
+    <div class="palm__spinner">
+      <span></span>
+    </div>
+  </div>
+</template>
 <template id="success">
   <div class="palm__final">
     <h2 class="palm__thanks-title">

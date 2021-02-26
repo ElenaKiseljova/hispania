@@ -5,12 +5,17 @@
 
 .amenities {
   & ul {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: space-between;
+    align-items: flex-start;
+    align-content: flex-start;
+
     max-height: 145px;
 
     margin-bottom: 24px;
-
-    column-count: 3;
-    column-gap: normal;
 
     list-style: none;
 
@@ -26,6 +31,8 @@
 
     & li {
       position: relative;
+
+      width: 30%;
 
       padding: 0;
       margin: 0;
@@ -63,8 +70,8 @@
 
 @media (max-width: 1330px) and (min-width: 1023px), (max-width: 689px) {
   .amenities {
-    & ul {
-      column-count: 2;
+    & ul li {
+      width: 48%;
     }
   }
 }

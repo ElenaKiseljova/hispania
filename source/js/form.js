@@ -119,7 +119,8 @@ document.addEventListener('DOMContentLoaded', () => {
           formCheck.addEventListener('submit', (evt) => {
             evt.preventDefault();
 
-            var contactSection = document.querySelector('.contact--index');
+            let buttonSubmit = formCheck.querySelector('button[type="submit"]');
+            let contactSection = document.querySelector('.contact--index');
             var htmlContent = '';
 
             let nameValue = formCheck.querySelector('input[name*="name"]')
@@ -129,7 +130,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             var data = {};
 
-            if (nameValue && emailValue && phoneValue && messageValue) {
+            if (nameValue && emailValue && phoneValue && messageValue && buttonSubmit) {
               data = {
                 action: 'sendmail',
                 name: nameValue.value,
@@ -143,6 +144,14 @@ document.addEventListener('DOMContentLoaded', () => {
                   url: hispania_ajax.url,
                   data: data,
                   type: 'POST',
+                  beforeSend: function (response) {
+                    buttonSubmit.textContent = 'Sending ...';
+                    buttonSubmit.classList.add('loading');
+                  },
+                  complete: function (response) {
+                    buttonSubmit.textContent = 'Sended!';
+                    buttonSubmit.classList.remove('loading');
+                  },
                   success: function(response){
                     htmlContent = `
                                       <h2 class="title title--contact-index">
